@@ -1,9 +1,11 @@
 class CreateUsages < ActiveRecord::Migration
-	def change
-		create_table :users do |t|
-			t.string :username
-			t.string :email
-			t.string :password_hash
-		end
-	end
+  def change
+  	create_table :usages do |t|
+  		t.integer :student_id
+  		t.integer :question_id
+  		t.integer :assigned_hours_ago
+  		t.integer :answered_hours_ago
+  	end
+  end
 end
+
