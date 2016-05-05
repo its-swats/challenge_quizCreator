@@ -16,7 +16,7 @@ be rake db:seed
 ## Usage
 
 * Launch the server using __be shotgun__
-* Navigate to **localhost:8080**
+* Navigate to **localhost:9393**
 * Enter any positive number in to the input box and select a sort type
 * Hit "Search"
 
