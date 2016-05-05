@@ -10,7 +10,10 @@
 				<h4>Generate a Quiz</h4>
 				<form action='/quiz' method='GET' id='quiz_creator'>
 					Number of Questions:<br>
-					<input id='num_questions' type='text' name='questions'>
+					<input id='num_questions' type='text' name='questions'><br><br>
+					Sort By:<br>
+					Difficulty <input type='radio' name='sort' value='difficulty' checked>
+					Strand <input type='radio' name='sort' value='strand_id'> <br>
 					<input type='submit'>
 				</form>
 			</div>
