@@ -11,4 +11,35 @@
 			</div>
 		</div>
 	</div>
+	<% if @questions %>
+	<div class='row'>
+		<div class='col-sm-12 col-md-6 col-md-offset-3 card'>
+			<div class='card-header'>
+				<h4>Quiz Details:<h4>
+			</div>
+			<div class='card-block'>
+				<table class='table'>
+					<thead>
+						<tr>
+							<th>Question ID</th>
+							<th>Strand</th>
+							<th>Standard</th>
+							<th>Difficulty</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @questions.final_quiz.each do |question| %>
+							<tr>
+								<th scope='row'><%=question.question_id%></th>
+								<td><%=question.strand_name%></td>
+								<td><%=question.standard_name%></td>
+								<td><%=question.difficulty%></td>
+							</tr>
+						<%end%>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<% end %>
 </div>

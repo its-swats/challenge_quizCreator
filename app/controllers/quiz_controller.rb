@@ -1,4 +1,4 @@
 get '/quiz' do
-	p params
+	@questions = Quiz.new(params['questions'].to_i)
 	erb :index
 end
