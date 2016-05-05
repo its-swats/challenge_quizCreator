@@ -6,10 +6,8 @@ class Quiz
 		@total_questions = questions
 		@strand_1 = Question.where(strand_id: 1)
 		@strand_2 = Question.where(strand_id: 2)
-		@difficulty = nil
 		populate_questions
 		sort_by(sort)
-		# question_ids
 	end  
 
   def populate_questions
@@ -22,10 +20,10 @@ class Quiz
 		@final_quiz.sort_by!{|hash| hash[type]}
 	end
 
-	# def question_ids
-	# 	@final_quiz.each do |question|
-	# 		p question.question_id
-	# 	end
-	# end
+	def average_difficulty
+		average = 0
+		@final_quiz.each {|question| average += question.difficulty }
+		(average / @final_quiz.length).round(2)
+	end
 
 end
