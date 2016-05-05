@@ -1,5 +1,5 @@
-# NoRedInk Take Home Quiz Challenge
-NoRedInk take home challenge using Sinatra 
+# Take Home Quiz Challenge
+Take home challenge using Sinatra. Goal is to manipulate data from multiple CSV files. 
 ## Installation
 Create and seed the database from terminal. 
 
