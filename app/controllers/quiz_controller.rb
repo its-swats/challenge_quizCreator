@@ -1,3 +1,4 @@
 get '/quiz' do
-	puts 'HIT'
+	p params
+	erb :index
 end
