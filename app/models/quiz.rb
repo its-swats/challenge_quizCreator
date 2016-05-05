@@ -21,6 +21,7 @@ class Quiz
 	end
 
 	def average_difficulty
+		# should be using inject here, will convert if time allows
 		average = 0
 		@final_quiz.each {|question| average += question.difficulty }
 		(average / @final_quiz.length).round(2)
